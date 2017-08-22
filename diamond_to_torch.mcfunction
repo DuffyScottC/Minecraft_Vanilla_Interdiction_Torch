@@ -30,7 +30,10 @@ execute @e[name=item.item.diamond,tag=W] ~ ~ ~ detect ~-1 ~ ~-1 minecraft:obsidi
 execute @e[name=item.item.diamond,tag=NW] ~ ~ ~ detect ~ ~ ~ minecraft:water 0 scoreboard players tag @s add WATER
 
 #if we get to this point, then all 8 obsidian blocks are in place AND the water is in place, so we can give the Interdiction Torch armor stand to the player who tossed the item
-execute @e[name=item.item.diamond,tag=WATER] ~ ~ ~ give @p minecraft:armor_stand 1 0 {HideFlags:1,ench:[{id:34,lvl:1}],display:{Name:"Interdiction Torch",Lore:["Repels hostile mobs,","arrows, and ghast","fireballs in a 5 block","radius."]},EntityTag:{Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:"torchMainNew"}}
+execute @e[name=item.item.diamond,tag=WATER] ~ ~ ~ give @p[score_dropDiamond_min=1] minecraft:armor_stand 1 0 {HideFlags:1,ench:[{id:34,lvl:1}],display:{Name:"Interdiction Torch",Lore:["Repels hostile mobs,","arrows, and ghast","fireballs in a 5 block","radius."]},EntityTag:{Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:"torchMainNew"}}
+
+#play a sound for the player
+execute @e[name=item.item.diamond,tag=WATER] ~ ~ ~ playsound minecraft:entity.experience_orb.pickup block @p[score_dropDiamond_min=1] ~ ~ ~ 1 2
 
 #Label any diamonds that have landed on the gound. If a diamond is on the ground then it should reset "the player who threw it"'s dropDiamond score
 scoreboard players tag @e[name=item.item.diamond] add DIAONGROUND {OnGround:1b}
