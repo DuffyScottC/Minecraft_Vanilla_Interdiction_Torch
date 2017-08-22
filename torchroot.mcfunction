@@ -21,3 +21,5 @@ execute @e[name=torchMainNew,type=armor_stand] ~ ~ ~ function repel_torch:place_
 #Allow the user to break the torch they can see in order to get back the interdiction torch and place it somewhere else
 execute @e[name=torchMain,type=armor_stand] ~ ~ ~ detect ~ ~ ~ minecraft:air 0 function repel_torch:break_torch
 
+execute @e[name=torchMain] ~ ~ ~  particle happyVillager ~ ~.6 ~ 1 1 1 .5 0
+
