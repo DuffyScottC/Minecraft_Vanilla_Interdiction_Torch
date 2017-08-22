@@ -24,11 +24,3 @@ execute @e[name=torchMain,type=armor_stand] ~-1.0 ~6.0 ~ entitydata @e[type=fire
 
 #Reflect NorthWest 4
 execute @e[name=torchMain,type=armor_stand] ~-1.0 ~6.0 ~-1.0 entitydata @e[type=fireball,name=toBeReflected,dx=-5,dy=-12,dz=-5] {direction:[-0.1,-0.01,-0.1],power:[-0.1,-0.01,-0.1]}
-
-
-
-#Reflect Up
-execute @e[name=torchMain,type=armor_stand] ~ ~ ~ entitydata @e[type=fireball,name=toBeReflected,dy=6] {direction:[0.0,0.1,0.0],power:[0.0,0.1,0.0]}
-
-#Reflect Down
-execute @e[name=torchMain,type=armor_stand] ~ ~ ~ entitydata @e[type=fireball,name=toBeReflected,dy=-6] {direction:[0.0,-0.1,0.0],power:[0.0,-0.1,0.0]}
