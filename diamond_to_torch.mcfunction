@@ -35,6 +35,9 @@ execute @e[name=item.item.diamond,tag=WATER] ~ ~ ~ give @p[score_dropDiamond_min
 #play a sound for the player
 execute @e[name=item.item.diamond,tag=WATER] ~ ~ ~ playsound minecraft:entity.experience_orb.pickup block @p[score_dropDiamond_min=1] ~ ~ ~ 1 2
 
+#give the player xp for crafting
+execute @e[name=item.item.diamond,tag=WATER] ~ ~ ~ xp 6 @p[score_dropDiamond_min=1]
+
 #Label any diamonds that have landed on the gound. If a diamond is on the ground then it should reset "the player who threw it"'s dropDiamond score
 scoreboard players tag @e[name=item.item.diamond] add DIAONGROUND {OnGround:1b}
 
