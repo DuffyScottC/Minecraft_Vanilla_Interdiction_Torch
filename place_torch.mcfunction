@@ -3,9 +3,6 @@
 #Rename the entity appropriately
 entitydata @s {CustomName:"torchMain"}
 
-#summon all the "torch" armor stands around it
-function repel_torch:summon_sphere
-
 #place a torch on the block the armor stand is standing on
 setblock ~ ~ ~ minecraft:torch
 
