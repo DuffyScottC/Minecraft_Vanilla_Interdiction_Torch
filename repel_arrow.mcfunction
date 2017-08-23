@@ -75,4 +75,4 @@ execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.0,0
 
 
 #Kill this arrow if it has been marked "toBeReflected" by a torchMain armor stand because we are done with it
-kill @s[name=toBeReflected]
+kill @s[name=alreadyReflected]
