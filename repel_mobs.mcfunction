@@ -1,11 +1,11 @@
-Motion:[0.0,0.0,-0.1] # North
-Motion:[0.1,0.0,-0.1] # NorthEast
-Motion:[0.1,0.0,0.0] # East
-Motion:[0.1,0.0,0.1] # SouthEast
-Motion:[0.0,0.0,0.1] # South
-Motion:[-0.1,0.0,0.1] # SouthWest
-Motion:[-0.1,0.0,0.0] # West
-Motion:[-0.1,0.0,-0.1] # NorthWest
+#Motion:[0.0,0.0,-0.1] # North
+#Motion:[0.1,0.0,-0.1] # NorthEast
+#Motion:[0.1,0.0,0.0] # East
+#Motion:[0.1,0.0,0.1] # SouthEast
+#Motion:[0.0,0.0,0.1] # South
+#Motion:[-0.1,0.0,0.1] # SouthWest
+#Motion:[-0.1,0.0,0.0] # West
+#Motion:[-0.1,0.0,-0.1] # NorthWest
 
 #Repel North
 execute @s ~-1 ~6 ~ entitydata @e[tag=RHOSTILE,dx=2,dy=-12,dz=-6] {Motion:[0.0,0.0,-0.1]}
@@ -30,6 +30,9 @@ execute @s ~-2 ~6 ~1 entitydata @e[tag=RHOSTILE,dx=-4,dy=-12,dz=-2] {Motion:[-0.
 
 #Repel NorthWest
 execute @s ~-2 ~6 ~-2 entitydata @e[tag=RHOSTILE,dx=-4,dy=-12,dz=-4] {Motion:[-0.1,0.0,-0.1]}
+
+#remove the RHOSTILE tag for entities outside of the radius
+scoreboard players tag @e[rm=5,tag=RHOSTILE] remove RHOSTILE
 
 #Label all hostile mobs in a radius of 5 blocks with the RHOSTILE tag
 scoreboard players tag @e[r=5,type=blaze] add RHOSTILE
