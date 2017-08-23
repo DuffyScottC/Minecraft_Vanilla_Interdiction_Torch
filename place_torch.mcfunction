@@ -43,3 +43,10 @@ execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=NOBLOCKWEST] ~ ~ ~ execute @s[t
 
 #Play the sound of wood being placed (which is the same as a torch being placed)
 execute @s[tag=!NOBLOCKSANYWHERE] ~ ~ ~ playsound minecraft:block.wood.place block @a[r=12] ~ ~ ~
+
+scoreboard players tag @s remove NOBLOCKDOWN
+scoreboard players tag @s remove NOBLOCKWEST
+scoreboard players tag @s remove NOBLOCKEAST
+scoreboard players tag @s remove NOBLOCKNORTH
+scoreboard players tag @s remove NOBLOCKSOUTH
+scoreboard players tag @s remove NOBLOCKSANYWHERE
