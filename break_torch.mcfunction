@@ -2,7 +2,7 @@
 #The trick is that it will kill the "torch" armor stands of other torches if they overlap its radius, so we need to kill all "torch" armor stands, then re-summon the "torch" armor stands of the interdiction torches that are still standing.
 #So, if we get to this point, all these commands will be run on an armor stand with no torch at its ~ ~ ~
 
-say Broken torch
+#say Broken torch
 
 #Rename the torch armor stand that is to be broken
 entitydata @s {CustomName:"torchMainOld"}
