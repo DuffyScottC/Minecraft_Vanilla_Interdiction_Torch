@@ -14,25 +14,39 @@ execute @s ~ ~ ~ entitydata @e[type=arrow,r=6] {CustomName:toBeReflected}
 #Reflect North
 execute @s ~-1 ~6 ~ execute @e[type=arrow,name=toBeReflected,dx=2,dy=-12,dz=-6] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.0,0.2,-0.6],pickup:2b}
 
+execute @s ~-1 ~6 ~ kill @e[type=arrow,name=toBeReflected,dx=2,dy=-12,dz=-6]
+
 #Reflect NorthEast
 execute @s ~2 ~6 ~-2 execute @e[type=arrow,name=toBeReflected,dx=4,dy=-12,dz=-4] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.4,0.2,-0.4],pickup:2b}
+
+execute @s ~2 ~6 ~-2 kill @e[type=arrow,name=toBeReflected,dx=4,dy=-12,dz=-4]
 
 #Reflect East
 execute @s ~2 ~6 ~-1 execute @e[type=arrow,name=toBeReflected,dx=4,dy=-12,dz=2] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.6,0.2,0.0],pickup:2b}
 
+execute @s ~2 ~6 ~-1kill @e[type=arrow,name=toBeReflected,dx=4,dy=-12,dz=2]
+
 #Reflect SouthEast
 execute @s ~2 ~6 ~2 execute @e[type=arrow,name=toBeReflected,dx=4,dy=-12,dz=4] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.4,0.2,0.4],pickup:2b}
+
+execute @s ~2 ~6 ~2 kill @e[type=arrow,name=toBeReflected,dx=4,dy=-12,dz=4]
 
 #Reflect South
 execute @s ~1 ~6 ~1 execute @e[type=arrow,name=toBeReflected,dx=-2,dy=-12,dz=5] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.0,0.2,0.6],pickup:2b}
 
+execute @s ~1 ~6 ~1 kill @e[type=arrow,name=toBeReflected,dx=-2,dy=-12,dz=5]
+
 #Reflect SouthWest
 execute @s ~-2 ~6 ~2 execute @e[type=arrow,name=toBeReflected,dx=-4,dy=-12,dz=4] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[-0.4,0.2,0.4],pickup:2b}
+
+execute @s ~-2 ~6 ~2 kill @e[type=arrow,name=toBeReflected,dx=-4,dy=-12,dz=4]
 
 #Reflect West
 execute @s ~-2 ~6 ~1 execute @e[type=arrow,name=toBeReflected,dx=-4,dy=-12,dz=-2] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[-0.6,0.2,0.0],pickup:2b}
 
+execute @s ~-2 ~6 ~1 kill @e[type=arrow,name=toBeReflected,dx=-4,dy=-12,dz=-2]
+
 #Reflect NorthWest
 execute @s ~-2 ~6 ~-2 execute @e[type=arrow,name=toBeReflected,dx=-4,dy=-12,dz=-4] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[-0.4,0.2,-0.4],pickup:2b}
 
-kill @e[type=arrow,name=toBeReflected,r=6]
+execute @s ~-2 ~6 ~-2 kill @e[type=arrow,name=toBeReflected,dx=-4,dy=-12,dz=-4]
