@@ -24,19 +24,24 @@ execute @s[tag=NOBLOCKNORTH] ~ ~ ~ say has NOBLOCKNORTH tag
 execute @s[tag=NOBLOCKSOUTH] ~ ~ ~ say has NOBLOCKSOUTH tag
 
 #If it does not have NOBLOCKDOWN, we can place a block Down
-execute @s[tag=!NOBLOCKDOWN] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 0
+execute @s[tag=!NOBLOCKDOWN] ~ ~ ~ scoreboard players tag @s add TORCHDOWN
+execute @s[tag=TORCHDOWN] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 0
 
 #If it has NOBLOCKDOWN; but not NOBLOCKWEST, we can place a block West
-execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=!NOBLOCKWEST] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 1
+execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=!NOBLOCKWEST] ~ ~ ~ scoreboard players tag @s add TORCHWEST
+execute @s[tag=TORCHWEST] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 1
 
-#If it has NOBLOCKDOWN, and NOBLOCKWEST; but not NOBLOCKEAST, we can place a block West
-execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=NOBLOCKWEST] ~ ~ ~ execute @s[tag=!NOBLOCKEAST] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 2
+#If it has NOBLOCKDOWN, and NOBLOCKWEST; but not NOBLOCKEAST, we can place a block East
+execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=NOBLOCKWEST] ~ ~ ~ execute @s[tag=!NOBLOCKEAST] ~ ~ ~ scoreboard players tag @s add TORCHEAST
+execute @s[tag=TORCHEAST] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 2
 
-#If it has NOBLOCKDOWN, NOBLOCKWEST, and NOBLOCKEAST; but not NOBLOCKNORTH, we can place a block West
-execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=NOBLOCKWEST] ~ ~ ~ execute @s[tag=NOBLOCKEAST] ~ ~ ~ execute @s[tag=!NOBLOCKNORTH] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 3
+#If it has NOBLOCKDOWN, NOBLOCKWEST, and NOBLOCKEAST; but not NOBLOCKNORTH, we can place a block North
+execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=NOBLOCKWEST] ~ ~ ~ execute @s[tag=NOBLOCKEAST] ~ ~ ~ execute @s[tag=!NOBLOCKNORTH] ~ ~ ~ scoreboard players tag @s add TORCHNORTH
+execute @s[tag=TORCHNORTH] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 3
 
-#If it has NOBLOCKDOWN, NOBLOCKWEST, NOBLOCKEAST, and NOBLOCKNORTH; but not NOBLOCKSOUTH, we can place a block West
-execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=NOBLOCKWEST] ~ ~ ~ execute @s[tag=NOBLOCKEAST] ~ ~ ~ execute @s[tag=NOBLOCKNORTH] ~ ~ ~ execute @s[tag=!NOBLOCKSOUTH] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 4
+#If it has NOBLOCKDOWN, NOBLOCKWEST, NOBLOCKEAST, and NOBLOCKNORTH; but not NOBLOCKSOUTH, we can place a block South
+execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=NOBLOCKWEST] ~ ~ ~ execute @s[tag=NOBLOCKEAST] ~ ~ ~ execute @s[tag=NOBLOCKNORTH] ~ ~ ~ execute @s[tag=!NOBLOCKSOUTH] ~ ~ ~ scoreboard players tag @s add TORCHSOUTH
+execute @s[tag=TORCHSOUTH] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 4
 
 #Play the sound of wood being placed (which is the same as a torch being placed)
 playsound minecraft:block.wood.place block @a[r=12] ~ ~ ~
