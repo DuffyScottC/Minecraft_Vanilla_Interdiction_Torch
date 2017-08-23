@@ -45,7 +45,7 @@ execute @s[tag=!TORAIRN] ~ ~ ~ execute @s[tag=!TORPLACEDALREADY] ~ ~ ~ setblock 
 execute @s[tag=!TORAIRN] ~ ~ ~ scoreboard objectives tag @s add TORPLACEDALREADY
 
 #Place South (if there is not an air block South and if a torch has not already been placed)
-execute @s[tag=!TORAIR] ~ ~ ~ execute @s[tag=!TORPLACEDALREADY] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 4
+execute @s[tag=!TORAIRS] ~ ~ ~ execute @s[tag=!TORPLACEDALREADY] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 4
 
 #Play the sound of wood being placed (which is the same as a torch being placed)
 playsound minecraft:block.wood.place block @a[r=12] ~ ~ ~
