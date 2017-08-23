@@ -10,7 +10,7 @@
 execute @e[name=torchMain,type=armor_stand] ~ ~ ~ function repel_torch:repel_mobs
 execute @e[name=torchMain,type=armor_stand] ~ ~ ~ function repel_torch:repel_arrows
 execute @e[name=torchMain,type=armor_stand] ~ ~ ~ function repel_torch:repel_fireball
-function repel_torch:repel_blaze_fireball
+execute @e[name=torchMain,type=armor_stand] ~ ~ ~ function repel_torch:repel_blaze_fireball
 
 #To save processing power, this function only runs if a player has tossed a diamond
 function repel_torch:diamond_to_torch if @a[score_dropDiamond_min=1]
