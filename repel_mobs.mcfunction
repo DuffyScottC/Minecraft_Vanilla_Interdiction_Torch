@@ -39,6 +39,9 @@ scoreboard players tag @e[r=5,type=] add RHOSTILE
 scoreboard players tag @e[r=5,type=] add RHOSTILE
 #shulker
 
+#Repel Up
+execute @s ~6 ~3 ~6 entitydata @e[tag=RHOSTILE,dx=-12,dy=3,dz=-12] {Motion:[0.0,1.0,0.0]}
+
 #Repel North
 execute @s ~-1 ~6 ~ entitydata @e[tag=RHOSTILE,dx=2,dy=-12,dz=-6] {Motion:[0.0,0.0,-0.5]}
 
