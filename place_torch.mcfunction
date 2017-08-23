@@ -38,15 +38,11 @@ execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=NOBLOCKWEST] ~ ~ ~ execute @s[t
 #If it has NOBLOCKDOWN, NOBLOCKWEST, NOBLOCKEAST, and NOBLOCKNORTH; but not NOBLOCKSOUTH, we can place a block West
 execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=NOBLOCKWEST] ~ ~ ~ execute @s[tag=NOBLOCKEAST] ~ ~ ~ execute @s[tag=NOBLOCKNORTH] ~ ~ ~ execute @s[tag=!NOBLOCKSOUTH] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 4
 
-#If it has NOBLOCKDOWN, NOBLOCKWEST, NOBLOCKEAST, NOBLOCKNORTH, and NOBLOCKSOUTH, then we should not place any torch, and we should not play any sound
-execute @s[tag=NOBLOCKDOWN] ~ ~ ~ execute @s[tag=NOBLOCKWEST] ~ ~ ~ execute @s[tag=NOBLOCKEAST] ~ ~ ~ execute @s[tag=NOBLOCKNORTH] ~ ~ ~ execute @s[tag=NOBLOCKSOUTH] ~ ~ ~ scoreboard players tag @s add NOBLOCKSANYWHERE
-
 #Play the sound of wood being placed (which is the same as a torch being placed)
-execute @s[tag=!NOBLOCKSANYWHERE] ~ ~ ~ playsound minecraft:block.wood.place block @a[r=12] ~ ~ ~
+playsound minecraft:block.wood.place block @a[r=12] ~ ~ ~
 
 scoreboard players tag @s remove NOBLOCKDOWN
 scoreboard players tag @s remove NOBLOCKWEST
 scoreboard players tag @s remove NOBLOCKEAST
 scoreboard players tag @s remove NOBLOCKNORTH
 scoreboard players tag @s remove NOBLOCKSOUTH
-scoreboard players tag @s remove NOBLOCKSANYWHERE
