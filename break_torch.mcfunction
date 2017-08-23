@@ -8,7 +8,7 @@
 entitydata @s {CustomName:"torchMainOld"}
 
 #Change the nearest torch item into an interdicion torch armor stand item
-entitydata @e[type=item,name=item.tile.torch,c=1] {Item:{id:"minecraft:armor_stand",Count:1b,Damage:0s,tag:{HideFlags:1,ench:[{id:34,lvl:1}],display:{Name:"Interdiction Torch",Lore:["Repels hostile mobs,","arrows, and ghast","fireballs in a 5 block","radius."]},EntityTag:{Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:"torchMainNew"}}}}
+entitydata @e[type=item,name=item.tile.torch,c=1] {Item:{id:"minecraft:armor_stand",Count:1b,Damage:0s,tag:{HideFlags:1,ench:[{id:34,lvl:1}],display:{Name:"Interdiction Torch",Lore:["Repels hostile mobs,","arrows, and ghast","fireballs in a 6 block","radius."]},EntityTag:{Invisible:1b,Invulnerable:1b,NoGravity:1b,Marker:1b,CustomName:"torchMainNew"}}}}
 
 #Kill the old interdiction torch armor stand called "torchMainOld"
 kill @s
