@@ -90,7 +90,7 @@ entitydata @s[name=toBeReflected] {CustomName:alreadyReflected}
 execute @s ~2 ~6 ~2 execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRANGE,dx=4,dy=-12,dz=4] ~ ~ ~ entitydata @e[type=arrow,r=5,c=1,name=!alreadyReflected] {CustomName:toBeReflected}
 
 #Summon a NorthWest-going arrow if there is a torchMain armor stand SouthEast of this arrow (which we tested for above)
-execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.0,0.2,0.6],pickup:2b}
+execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[-0.4,0.2,-0.4],pickup:2b}
 
 #rename this arrow if we were successful (if the current name of this arrow is "toBeReflected")
 entitydata @s[name=toBeReflected] {CustomName:alreadyReflected}
