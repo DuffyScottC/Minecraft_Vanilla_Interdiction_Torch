@@ -7,29 +7,6 @@
 #Motion:[-0.5,0.0,0.0] # WEST
 #Motion:[-0.4,0.0,-0.4] # NORTHWEST
 
-#Repel North
-execute @s ~-1 ~6 ~ entitydata @e[tag=RHOSTILE,dx=2,dy=-12,dz=-6] {Motion:[0.0,0.0,-0.5]}
-
-#Repel NorthEast
-execute @s ~2 ~6 ~-2 entitydata @e[tag=RHOSTILE,dx=4,dy=-12,dz=-4] {Motion:[0.4,0.0,-0.4]}
-
-#Repel East
-execute @s ~2 ~6 ~-1 entitydata @e[tag=RHOSTILE,dx=4,dy=-12,dz=2] {Motion:[0.5,0.0,0.0]}
-
-#Repel SouthEast
-execute @s ~2 ~6 ~2 entitydata @e[tag=RHOSTILE,dx=4,dy=-12,dz=4] {Motion:[0.4,0.0,0.4]}
-
-#Repel South
-execute @s ~1 ~6 ~1 entitydata @e[tag=RHOSTILE,dx=-2,dy=-12,dz=5] {Motion:[0.0,0.0,0.5]}
-
-#Repel SouthWest
-execute @s ~-2 ~6 ~2 entitydata @e[tag=RHOSTILE,dx=-4,dy=-12,dz=4] {Motion:[-0.4,0.0,0.4]}
-
-#Repel West
-execute @s ~-2 ~6 ~1 entitydata @e[tag=RHOSTILE,dx=-4,dy=-12,dz=-2] {Motion:[-0.5,0.0,0.0]}
-
-#Repel NorthWest
-execute @s ~-2 ~6 ~-2 entitydata @e[tag=RHOSTILE,dx=-4,dy=-12,dz=-4] {Motion:[-0.4,0.0,-0.4]}
 
 #remove the RHOSTILE tag for entities outside of the radius
 scoreboard players tag @e[rm=5,tag=RHOSTILE] remove RHOSTILE
@@ -61,3 +38,27 @@ scoreboard players tag @e[r=5,type=] add RHOSTILE
 scoreboard players tag @e[r=5,type=] add RHOSTILE
 scoreboard players tag @e[r=5,type=] add RHOSTILE
 #shulker
+
+#Repel North
+execute @s ~-1 ~6 ~ entitydata @e[tag=RHOSTILE,dx=2,dy=-12,dz=-6] {Motion:[0.0,0.0,-0.5]}
+
+#Repel NorthEast
+execute @s ~2 ~6 ~-2 entitydata @e[tag=RHOSTILE,dx=4,dy=-12,dz=-4] {Motion:[0.4,0.0,-0.4]}
+
+#Repel East
+execute @s ~2 ~6 ~-1 entitydata @e[tag=RHOSTILE,dx=4,dy=-12,dz=2] {Motion:[0.5,0.0,0.0]}
+
+#Repel SouthEast
+execute @s ~2 ~6 ~2 entitydata @e[tag=RHOSTILE,dx=4,dy=-12,dz=4] {Motion:[0.4,0.0,0.4]}
+
+#Repel South
+execute @s ~1 ~6 ~1 entitydata @e[tag=RHOSTILE,dx=-2,dy=-12,dz=5] {Motion:[0.0,0.0,0.5]}
+
+#Repel SouthWest
+execute @s ~-2 ~6 ~2 entitydata @e[tag=RHOSTILE,dx=-4,dy=-12,dz=4] {Motion:[-0.4,0.0,0.4]}
+
+#Repel West
+execute @s ~-2 ~6 ~1 entitydata @e[tag=RHOSTILE,dx=-4,dy=-12,dz=-2] {Motion:[-0.5,0.0,0.0]}
+
+#Repel NorthWest
+execute @s ~-2 ~6 ~-2 entitydata @e[tag=RHOSTILE,dx=-4,dy=-12,dz=-4] {Motion:[-0.4,0.0,-0.4]}
