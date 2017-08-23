@@ -24,5 +24,3 @@ execute @s ~-2 ~6 ~1 entitydata @e[type=small_fireball,name=toBeReflected,dx=-4,
 
 #Reflect NorthWest
 execute @s ~-2 ~6 ~-2 entitydata @e[type=small_fireball,name=toBeReflected,dx=-4,dy=-12,dz=-4] {direction:[-0.1,-0.01,-0.1],power:[-0.1,-0.01,-0.1]}
-
-#execute @s ~ ~ ~ kill @e[type=small_fireball,name=toBeReflected,r=6]
