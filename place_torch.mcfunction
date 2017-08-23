@@ -7,16 +7,16 @@ entitydata @s {CustomName:"torchMain"}
 execute @s ~ ~ ~ detect minecraft:air 0 ~ ~-1 ~ scoreboard players tag @s add TORAIRD
 
 #West 1 - If there is no block below, check if there is to the West
-execute @s[tag=TORAIRD] ~ ~ ~ detect ~-1 ~ ~ minecraft:air 0 scoreboard players tag @s add TORAIRW
+execute @s ~ ~ ~ detect ~-1 ~ ~ minecraft:air 0 scoreboard players tag @s add TORAIRW
 
 #East 2 - If there is no block to the West, check if there is to the East
-execute @s[tag=TORAIRW] ~ ~ ~ detect ~1 ~ ~ minecraft:air 0 scoreboard players tag @s add TORAIRE
+execute @s ~ ~ ~ detect ~1 ~ ~ minecraft:air 0 scoreboard players tag @s add TORAIRE
 
 #North 3 - If there is no block to the East, check if there is to the North
-execute @s[tag=TORAIRE] ~ ~ ~ detect ~ ~ ~-1 minecraft:air 0 scoreboard players tag @s add TORAIRN
+execute @s ~ ~ ~ detect ~ ~ ~-1 minecraft:air 0 scoreboard players tag @s add TORAIRN
 
 #South 4 - If there is no block to the North, check if there is to the South
-execute @s[tag=TORAIRN] ~ ~ ~ detect 0 ~ ~ ~1 minecraft:air scoreboard players tag @s add TORAIRS
+execute @s ~ ~ ~ detect 0 ~ ~ ~1 minecraft:air scoreboard players tag @s add TORAIRS
 
 
 
