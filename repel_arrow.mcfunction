@@ -38,19 +38,19 @@ execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.4,0
 
 
 #MARK: - Reflect South
-#Test if there is a torchMain armor stand OPPOSITE_TEST_DIRECTION of this arrow
-execute @s REL_COORDS_OF_OPPOSITE_DIRECTION execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRANGE,A_R_E_A_DETECTION] ~ ~ ~ entitydata @e[type=arrow,r=5,c=1] {CustomName:toBeReflected}
+#Test if there is a torchMain armor stand North of this arrow
+execute @s ~-1 ~6 ~ execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRANGE,dx=2,dy=-12,dz=-6] ~ ~ ~ entitydata @e[type=arrow,r=5,c=1] {CustomName:toBeReflected}
 
-#Summon a FLING__DIRECTION-going arrow if there is a torchMain armor stand OPPOSITE_TEST_DIRECTION of this arrow (which we tested for above)
-execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {M_O_T_I_O_N_T_A_G,pickup:2b}
+#Summon a South-going arrow if there is a torchMain armor stand North of this arrow (which we tested for above)
+execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.0,0.2,0.6],pickup:2b,pickup:2b}
 
 
 
 #MARK: - Reflect SouthWest
-#Test if there is a torchMain armor stand OPPOSITE_TEST_DIRECTION of this arrow
-execute @s REL_COORDS_OF_OPPOSITE_DIRECTION execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRANGE,A_R_E_A_DETECTION] ~ ~ ~ entitydata @e[type=arrow,r=5,c=1] {CustomName:toBeReflected}
+#Test if there is a torchMain armor stand NorthEast of this arrow
+execute @s ~2 ~6 ~-2 execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRANGE,dx=4,dy=-12,dz=-4] ~ ~ ~ entitydata @e[type=arrow,r=5,c=1] {CustomName:toBeReflected}
 
-#Summon a FLING__DIRECTION-going arrow if there is a torchMain armor stand OPPOSITE_TEST_DIRECTION of this arrow (which we tested for above)
+#Summon a SouthWest-going arrow if there is a torchMain armor stand NorthEast of this arrow (which we tested for above)
 execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {M_O_T_I_O_N_T_A_G,pickup:2b}
 
 
