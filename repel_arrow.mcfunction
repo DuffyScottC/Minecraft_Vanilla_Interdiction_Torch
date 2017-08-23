@@ -12,12 +12,16 @@ execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.0,0
 entitydata @s[name=toBeReflected] {CustomName:alreadyReflected}
 
 
+
 #MARK: - Reflect NorthEast
 #Test if there is a torchMain armor stand SouthWest of this arrow
 execute @s ~-2 ~6 ~2 execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRANGE,dx=-4,dy=-12,dz=4] ~ ~ ~ entitydata @e[type=arrow,r=5,c=1,name=!alreadyReflected] {CustomName:toBeReflected}
 
 #Summon a NorthEast-going arrow if there is a torchMain armor stand SouthWest of this arrow (which we tested for above)
 execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.4,0.2,-0.4],pickup:2b}
+
+#rename this arrow if we were successful (if the current name of this arrow is "toBeReflected")
+entitydata @s[name=toBeReflected] {CustomName:alreadyReflected}
 
 
 
@@ -28,6 +32,9 @@ execute @s ~-2 ~6 ~1 execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRAN
 #Summon a East-going arrow if there is a torchMain armor stand West of this arrow (which we tested for above)
 execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.6,0.2,0.0],pickup:2b}
 
+#rename this arrow if we were successful (if the current name of this arrow is "toBeReflected")
+entitydata @s[name=toBeReflected] {CustomName:alreadyReflected}
+
 
 
 #MARK: - Reflect SouthEast
@@ -36,6 +43,9 @@ execute @s ~-2 ~6 ~-2 execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRA
 
 #Summon a SouthEast-going arrow if there is a torchMain armor stand NorthWest of this arrow (which we tested for above)
 execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.4,0.2,0.4],pickup:2b}
+
+#rename this arrow if we were successful (if the current name of this arrow is "toBeReflected")
+entitydata @s[name=toBeReflected] {CustomName:alreadyReflected}
 
 
 
@@ -46,6 +56,9 @@ execute @s ~-1 ~6 ~ execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRANG
 #Summon a South-going arrow if there is a torchMain armor stand North of this arrow (which we tested for above)
 execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.0,0.2,0.6],pickup:2b,pickup:2b}
 
+#rename this arrow if we were successful (if the current name of this arrow is "toBeReflected")
+entitydata @s[name=toBeReflected] {CustomName:alreadyReflected}
+
 
 
 #MARK: - Reflect SouthWest
@@ -54,6 +67,9 @@ execute @s ~2 ~6 ~-2 execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRAN
 
 #Summon a SouthWest-going arrow if there is a torchMain armor stand NorthEast of this arrow (which we tested for above)
 execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[-0.4,0.2,0.4],pickup:2b}
+
+#rename this arrow if we were successful (if the current name of this arrow is "toBeReflected")
+entitydata @s[name=toBeReflected] {CustomName:alreadyReflected}
 
 
 
@@ -64,6 +80,9 @@ execute @s ~2 ~6 ~-1 execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRAN
 #Summon a West-going arrow if there is a torchMain armor stand East of this arrow (which we tested for above)
 execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[-0.6,0.2,0.0],pickup:2b}
 
+#rename this arrow if we were successful (if the current name of this arrow is "toBeReflected")
+entitydata @s[name=toBeReflected] {CustomName:alreadyReflected}
+
 
 
 #MARK: - Reflect NorthWest
@@ -72,6 +91,9 @@ execute @s ~2 ~6 ~2 execute @e[c=1,name=torchMain,type=armor_stand,tag=TORINRANG
 
 #Summon a NorthWest-going arrow if there is a torchMain armor stand SouthEast of this arrow (which we tested for above)
 execute @s[name=toBeReflected] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.0,0.2,0.6],pickup:2b}
+
+#rename this arrow if we were successful (if the current name of this arrow is "toBeReflected")
+entitydata @s[name=toBeReflected] {CustomName:alreadyReflected}
 
 
 #Kill this arrow if it has been marked "toBeReflected" by a torchMain armor stand because we are done with it
