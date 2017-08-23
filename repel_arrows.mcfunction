@@ -9,7 +9,7 @@
 #summon minecraft:arrow 1066 60 702 {Motion:[0.4,0.2,0.4]} #SouthEast
 
 #Rename all arrows in radius 6 of torchMain
-execute @s ~ ~ ~ entitydata @e[type=arrow,r=6] {CustomName:toBeReflected}
+entitydata @e[type=arrow,r=6] {CustomName:toBeReflected}
 
 #Reflect North
 execute @s ~-1 ~6 ~ execute @e[type=arrow,name=toBeReflected,dx=2,dy=-12,dz=-6] ~ ~ ~ summon minecraft:arrow ~ ~ ~ {Motion:[0.0,0.2,-0.6],pickup:2b}
