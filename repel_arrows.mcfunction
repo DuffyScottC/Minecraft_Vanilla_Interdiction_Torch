@@ -1,5 +1,5 @@
 #Label armor stands within a 7 block range of this arrow
-scoreboard players tag @e[name=torchMain,type=armor_stand,r=7] add TORINRANGE
+scoreboard players tag @e[name=torchMain,type=armor_stand,r=6] add TORINRANGE
 
 #MARK: - Reflect North
 #Test if there is a torchMain armor stand South of this arrow

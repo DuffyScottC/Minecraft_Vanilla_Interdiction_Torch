@@ -1,5 +1,5 @@
 #Rename all small_fireballs in radius 7 of torchMain
-execute @s ~ ~ ~ entitydata @e[type=small_fireball,r=7] {CustomName:toBeReflected}
+execute @s ~ ~ ~ entitydata @e[type=small_fireball,r=6] {CustomName:toBeReflected}
 
 #Reflect North
 execute @s ~-1 ~6 ~ entitydata @e[type=small_fireball,name=toBeReflected,dx=2,dy=-12,dz=-6] {direction:[0.0,-0.01,-0.1],power:[0.0,-0.01,-0.1]}
