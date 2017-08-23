@@ -1,11 +1,11 @@
-Motion:[0.0,0.0,-0.5] # NORTH
-Motion:[0.4,0.0,-0.4] # NORTHEAST
-Motion:[0.5,0.0,0.0] # EAST
-Motion:[0.4,0.0,0.4] # SOUTHEAST
-Motion:[0.0,0.0,0.5] # SOUTH
-Motion:[-0.4,0.0,0.4] # SOUTHWEST
-Motion:[-0.5,0.0,0.0] # WEST
-Motion:[-0.4,0.0,-0.4] # NORTHWEST
+#Motion:[0.0,0.0,-0.5] # NORTH
+#Motion:[0.4,0.0,-0.4] # NORTHEAST
+#Motion:[0.5,0.0,0.0] # EAST
+#Motion:[0.4,0.0,0.4] # SOUTHEAST
+#Motion:[0.0,0.0,0.5] # SOUTH
+#Motion:[-0.4,0.0,0.4] # SOUTHWEST
+#Motion:[-0.5,0.0,0.0] # WEST
+#Motion:[-0.4,0.0,-0.4] # NORTHWEST
 
 #Repel North
 execute @s ~-1 ~6 ~ entitydata @e[tag=RHOSTILE,dx=2,dy=-12,dz=-6] {Motion:[0.0,0.0,-0.5]}
