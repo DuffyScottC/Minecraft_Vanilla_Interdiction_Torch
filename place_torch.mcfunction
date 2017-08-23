@@ -17,12 +17,6 @@ execute @s ~ ~ ~ detect ~ ~ ~-1 minecraft:air 0 scoreboard players tag @s add NO
 #South
 execute @s ~ ~ ~ detect ~ ~ ~1 minecraft:air 0 scoreboard players tag @s add NOBLOCKSOUTH
 
-execute @s[tag=NOBLOCKDOWN] ~ ~ ~ say has NOBLOCKDOWN tag
-execute @s[tag=NOBLOCKWEST] ~ ~ ~ say has NOBLOCKWEST tag
-execute @s[tag=NOBLOCKEAST] ~ ~ ~ say has NOBLOCKEAST tag
-execute @s[tag=NOBLOCKNORTH] ~ ~ ~ say has NOBLOCKNORTH tag
-execute @s[tag=NOBLOCKSOUTH] ~ ~ ~ say has NOBLOCKSOUTH tag
-
 #If it does not have NOBLOCKDOWN, we can place a block Down
 execute @s[tag=!NOBLOCKDOWN] ~ ~ ~ scoreboard players tag @s add TORCHDOWN
 execute @s[tag=TORCHDOWN] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 0
