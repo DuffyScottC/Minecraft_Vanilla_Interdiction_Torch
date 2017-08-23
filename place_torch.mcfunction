@@ -21,7 +21,7 @@ execute @s[tag=TORAIRN] ~ ~ ~ detect 0 ~ ~ ~1 minecraft:air scoreboard players t
 
 
 #Place Down  (if there is not an air block below)
-execute @s[tag=!TORAIRD] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 0
+execute @s[tag=!TORAIRD] ~ ~ ~ execute @s[tag=!TORPLACEDALREADY] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 0
 
 #Mark the armor stand if there is already a torch
 execute @s ~ ~ ~ detect ~ ~ ~ minecraft torch 0 scoreboard objectives tag @s add TORPLACEDALREADY
@@ -30,19 +30,19 @@ execute @s ~ ~ ~ detect ~ ~ ~ minecraft torch 0 scoreboard objectives tag @s add
 execute @s[tag=!TORAIRW] ~ ~ ~ execute @s[tag=!TORPLACEDALREADY] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 1
 
 #Mark the armor stand if there is already a torch
-execute @s ~ ~ ~ detect ~ ~ ~ minecraft torch 0 scoreboard objectives tag @s add TORPLACEDALREADY
+execute @s ~ ~ ~ detect ~ ~ ~ minecraft torch 1 scoreboard objectives tag @s add TORPLACEDALREADY
 
 #Place East (if there is not an air block East and if a torch has not already been placed)
 execute @s[tag=!TORAIRE] ~ ~ ~ execute @s[tag=!TORPLACEDALREADY] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 2
 
 #Mark the armor stand if there is already a torch
-execute @s ~ ~ ~ detect ~ ~ ~ minecraft torch 0 scoreboard objectives tag @s add TORPLACEDALREADY
+execute @s ~ ~ ~ detect ~ ~ ~ minecraft torch 2 scoreboard objectives tag @s add TORPLACEDALREADY
 
 #Place North (if there is not an air block North and if a torch has not already been placed)
 execute @s[tag=!TORAIRN] ~ ~ ~ execute @s[tag=!TORPLACEDALREADY] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 3
 
 #Mark the armor stand if there is already a torch
-execute @s ~ ~ ~ detect ~ ~ ~ minecraft torch 0 scoreboard objectives tag @s add TORPLACEDALREADY
+execute @s ~ ~ ~ detect ~ ~ ~ minecraft torch 3 scoreboard objectives tag @s add TORPLACEDALREADY
 
 #Place South (if there is not an air block South and if a torch has not already been placed)
 execute @s[tag=!TORAIR] ~ ~ ~ execute @s[tag=!TORPLACEDALREADY] ~ ~ ~ setblock ~ ~ ~ minecraft:torch 4
