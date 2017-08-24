@@ -7,7 +7,7 @@
 #execute @e[type=player,rym=69,ry=113] ~ ~ ~ say 7 rym=69,ry=113 West
 #execute @e[type=player,rym=114,ry=158] ~ ~ ~ say 8 rym=114,ry=158 NorthWest
 
-execute @e[name=torchMain,type=armor_stand] ~ ~ ~ repel_torch:torch_main
+execute @e[name=torchMain,type=armor_stand] ~ ~ ~ function repel_torch:torch_main
 
 #When the user places a new interdiction torch, we need to set up the torch
 execute @e[name=torchMainNew,type=armor_stand] ~ ~ ~ function repel_torch:place_torch
