@@ -2,6 +2,10 @@
 
 scoreboard objectives add dropDiamond stat.drop.minecraft.diamond
 
+gamerule gameLoopFunction repel_torch:torchroot
+
+gamerule commandBlockOutput false
+
 say Thanks for downloading Artemis_Fowl_2nd's Vanilla Interdiction Torch mod!
 say If you need the download link again, here it is:
 say placeholder_for_download_link
