@@ -8,7 +8,7 @@
 #execute @e[type=player,rym=114,ry=158] ~ ~ ~ say 8 rym=114,ry=158 NorthWest
 
 execute @e[name=torchMain,type=armor_stand] ~ ~ ~ function repel_torch:repel_mobs
-execute @e[type=arrow] ~ ~ ~ function repel_torch:repel_arrows
+execute @e[name=torchMain,type=armor_stand] ~ ~ ~ execute @e[type=arrow,r=8] ~ ~ ~ function repel_torch:repel_arrows
 execute @e[name=torchMain,type=armor_stand] ~ ~ ~ function repel_torch:repel_fireball
 execute @e[name=torchMain,type=armor_stand] ~ ~ ~ function repel_torch:repel_blaze_fireball
 

@@ -31,6 +31,7 @@ scoreboard players tag @e[r=6,type=wither_skeleton] add RHOSTILE
 scoreboard players tag @e[r=6,type=zombie] add RHOSTILE
 scoreboard players tag @e[r=6,type=zombie_villager] add RHOSTILE
 scoreboard players tag @e[r=6,type=cave_spider] add RHOSTILE
+scoreboard players tag @e[r=6,type=spider] add RHOSTILE
 scoreboard players tag @e[r=6,type=enderman] add RHOSTILE
 scoreboard players tag @e[r=6,type=illusion_illager] add RHOSTILE
 scoreboard players tag @e[r=6,type=] add RHOSTILE
