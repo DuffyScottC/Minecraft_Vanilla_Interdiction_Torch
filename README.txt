@@ -2,7 +2,7 @@ Thanks for downloading Artemis_Fowl_2nd's Vanilla Interdiction Torch mod v1.0!
 Check back frequently for new versions! Please post any questions, report any glitches or problems, and provide suggestions on the forums!
 
 ------------------Setup instructions:---------------------
-1. Move this whole folder (called "repel_torch") to your world's "functions" folder. 
+1. Open your world's "functions" folder. 
 	- The "functions" folder is located in your ".minecraft" folder ("minecraft" for 
 	Mac) in: saves/YOUR_WORLD_FOLDER/data/functions
 
@@ -20,7 +20,13 @@ Check back frequently for new versions! Please post any questions, report any gl
 		4. Open "Application Support"
 		5. Open "minecraft"
 
-2. If you have commands/cheats enabled in your world, skip this step. If not:
+2. Once, you have your "functions" folder open, create a new folder (within the functions folder) called "repel_torch".
+
+3. Drag the contents of the folder you downloaded (the folder this README is located) into the "repel_torch" folder you just created.
+
+4. Open Minecraft
+
+5. If you have commands/cheats enabled in your world, skip this step. If not:
 	- Open your world
 	- Pause the game
 	- Press "Open to LAN"
@@ -30,9 +36,9 @@ Check back frequently for new versions! Please post any questions, report any gl
 	torch functions. You won't need to do this after you've followed these 
 	instructions once.
 
-3. Type the command "/reload" onto the chat (OR close and reopen your world)
+6. Type the command "/reload" onto the chat (OR close and reopen your world)
 
-4. Type the following command into chat and press enter:
+7. Type the following command into chat and press enter:
 	/function repel_torch:initialize
 
 And there you have it! You should be all set up! If you have problems, consult the forums.
