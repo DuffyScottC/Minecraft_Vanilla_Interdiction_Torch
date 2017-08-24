@@ -12,8 +12,6 @@ execute @e[name=torchMain,type=armor_stand] ~ ~ ~ function repel_torch:torch_mai
 #When the user places a new interdiction torch, we need to set up the torch
 execute @e[name=torchMainNew,type=armor_stand] ~ ~ ~ function repel_torch:place_torch
 
-execute @e[name=torchMain] ~ ~ ~ function repel_torch:particles
-
 #To save processing power, this function only runs if a player has tossed a diamond
 function repel_torch:diamond_to_torch if @a[score_dropDiamond_min=1]
 
